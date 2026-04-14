@@ -1,3 +1,20 @@
+/******************************************************************************
+ * @file        GgaEncoder.h
+ * @brief       Encoder for NMEA 0183 GGA sentences
+ *
+ * @details
+ * GGA contains essential GNSS fix data, including:
+ *  - UTC time
+ *  - latitude / longitude
+ *  - fix quality
+ *  - satellites used
+ *  - HDOP
+ *  - altitude
+ *
+ * @author      KaLu-87
+ * @date        2026-04-15
+ ******************************************************************************/
+
 #pragma once
 
 #include "../../domain/SimulatorState.h"
@@ -5,9 +22,19 @@
 #include "NmeaChecksum.h"
 #include <QString>
 
+/**
+ * @class GgaEncoder
+ * @brief Encodes GGA sentences from the current simulator state
+ */
 class GgaEncoder
 {
 public:
+    /**
+     * @brief Encodes a GGA sentence
+     *
+     * @param state Current simulator state
+     * @return Complete GGA NMEA sentence including checksum and CRLF
+     */
     static QString encode(const SimulatorState& state)
     {
         QString latHem;
