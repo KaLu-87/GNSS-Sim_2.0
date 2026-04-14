@@ -29,7 +29,7 @@
 class GgaEncoder
 {
 public:
-    /*
+    /**
      * @brief Encodes a GGA sentence
      *
      * @param state Current simulator state

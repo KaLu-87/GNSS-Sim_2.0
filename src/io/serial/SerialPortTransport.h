@@ -24,7 +24,7 @@
 #include <QObject>
 #include <QSerialPort>
 
-/*
+/**
  * @class SerialPortTransport
  * @brief Minimal RS232 transport wrapper
  */
@@ -33,7 +33,7 @@ class SerialPortTransport : public QObject
     Q_OBJECT
 
 public:
-    /*
+    /**
      * @brief Opens the configured serial port
      *
      * @param portName Name of the COM/serial port
@@ -56,7 +56,7 @@ public:
             m_port.close();
     }
 
-    /*
+    /**
      * @brief Writes raw bytes to the serial port
      *
      * @param data Byte array to be transmitted
